@@ -10,4 +10,6 @@ public partial class AddClientWindow : Window
     {
         InitializeComponent();
     }
+
+
 }
