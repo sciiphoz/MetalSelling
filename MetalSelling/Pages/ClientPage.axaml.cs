@@ -36,16 +36,16 @@ public partial class ClientPage : UserControl
 
     private async void AddClientButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        var editWindow = new AddClientWindow();
+        var addWindow = new AddClientWindow();
         var parent = this.VisualRoot as Window;
-        await editWindow.ShowDialog(parent);
+        await addWindow.ShowDialog(parent);
 
         RefreshData();
     }
 
     private async void DeleteClientButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        var box = MessageBoxManager.GetMessageBoxStandard("Warning.", "Are you sure you want to delete this client?", MsBox.Avalonia.Enums.ButtonEnum.YesNo);
+        var box = MessageBoxManager.GetMessageBoxStandard("Warning.", "Are you sure you want to delete this client?", MsBox.Avalonia.Enums.ButtonEnum.YesNo, MsBox.Avalonia.Enums.Icon.Warning);
 
         var result = await box.ShowAsync();
 

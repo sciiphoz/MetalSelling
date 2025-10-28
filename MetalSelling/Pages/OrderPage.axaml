@@ -6,12 +6,12 @@
              x:Class="MetalSelling.OrderPage">
         <Grid>
 		<Grid.RowDefinitions>
-			<RowDefinition Height="5*"></RowDefinition>
+			<RowDefinition Height="4*"></RowDefinition>
 			<RowDefinition Height="1*"></RowDefinition>
 		</Grid.RowDefinitions>
 
 		<ScrollViewer Grid.Row="0">
-			<ListBox x:Name="MainListBox" DoubleTapped="MainListBox_DoubleTapped">
+			<ListBox x:Name="MainListBox">
 				<ListBox.ItemTemplate>
 					<DataTemplate>
 						<Border Width="1000" Height="150" BorderThickness="2" BorderBrush="#546F94" Background="#ABCFCE">
@@ -56,7 +56,8 @@
 		</ScrollViewer>
 
 		<StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-			<Button Background="#ABCFCE" x:Name="AddClientButton" Width="75" HorizontalContentAlignment="Center" Margin="0 25" Click="AddClientButton_Click" Content="Add"></Button>
+			<Button x:Name="AddOrderButton" Width="75" HorizontalContentAlignment="Center" Margin="25 0" Click="AddOrderButton_Click" Content="Add"></Button>
+			<Button x:Name="DeleteOrderButton" Width="75" HorizontalContentAlignment="Center" Margin="25 0" Click="DeleteOrderButton_Click" Content="Delete"></Button>
 		</StackPanel>
     </Grid>
 </UserControl>

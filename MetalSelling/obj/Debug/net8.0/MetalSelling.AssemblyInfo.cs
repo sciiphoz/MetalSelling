@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MetalSelling")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1b09d2d702041c5c2c80aa72a878cb72d917176")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37a4afc99d0f5151ccaf65b85d978c94337abcd9")]
 [assembly: System.Reflection.AssemblyProductAttribute("MetalSelling")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MetalSelling")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -5,5 +5,40 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="MetalSelling.EditClientWindow"
         Title="EditClientWindow">
-  Welcome to Avalonia!
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+		</Grid.RowDefinitions>
+		
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+
+		<StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center">
+			<TextBlock>Name</TextBlock>
+			<TextBox x:Name="NameTextBox" Width="250"/>
+		</StackPanel>
+		<StackPanel Grid.Row="2" Grid.Column="0"  HorizontalAlignment="Center">
+			<TextBlock>Type</TextBlock>
+			<ComboBox x:Name="IdClientTypeComboBox" DisplayMemberBinding="{Binding Title}" Width="250"/>
+		</StackPanel>
+		<StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
+			<TextBlock>Phone</TextBlock>
+			<TextBox x:Name="PhoneTextBox" Width="250"/>
+		</StackPanel>
+		<StackPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center">
+			<TextBlock>Email</TextBlock>
+			<TextBox x:Name="EmailTextBox" Width="250"/>
+		</StackPanel>
+
+
+		<StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+			<Button Background="#ABCFCE" x:Name="SaveButton" HorizontalAlignment="Center" Width="75" Margin="0, 0, 50, 0" HorizontalContentAlignment="Center" Click="SaveButton_Click">Save</Button>
+			<Button Background="#ABCFCE" x:Name="BackButton" HorizontalAlignment="Center" Width="75" HorizontalContentAlignment="Center" Click="BackButton_Click">Back</Button>
+		</StackPanel>
+    </Grid>
 </Window>

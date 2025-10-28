@@ -11,40 +11,52 @@
       "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|c:\\users\\sciiphoz\\source\\repos\\metalselling\\metalselling\\pages\\orderpage.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\pages\\orderpage.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+      "AbsoluteMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|c:\\users\\sciiphoz\\source\\repos\\metalselling\\metalselling\\windows\\addorderwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\windows\\addorderwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|c:\\users\\sciiphoz\\source\\repos\\metalselling\\metalselling\\pages\\supplypage.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\pages\\supplypage.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+      "AbsoluteMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|c:\\users\\sciiphoz\\source\\repos\\metalselling\\metalselling\\windows\\addorderwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\windows\\addorderwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|c:\\users\\sciiphoz\\source\\repos\\metalselling\\metalselling\\data\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\data\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|c:\\users\\sciiphoz\\source\\repos\\metalselling\\metalselling\\windows\\addsupplywindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\windows\\addsupplywindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|c:\\users\\sciiphoz\\source\\repos\\metalselling\\metalselling\\data\\supply.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\data\\supply.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|c:\\users\\sciiphoz\\source\\repos\\metalselling\\metalselling\\data\\history.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\data\\history.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|c:\\users\\sciiphoz\\source\\repos\\metalselling\\metalselling\\pages\\productpage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\pages\\productpage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|c:\\users\\sciiphoz\\source\\repos\\metalselling\\metalselling\\pages\\supplypage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\pages\\supplypage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|c:\\users\\sciiphoz\\source\\repos\\metalselling\\metalselling\\windows\\addclientwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\windows\\addclientwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|c:\\users\\sciiphoz\\source\\repos\\metalselling\\metalselling\\windows\\addsupplywindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\windows\\addsupplywindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|c:\\users\\sciiphoz\\source\\repos\\metalselling\\metalselling\\windows\\editclientwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\windows\\editclientwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|c:\\users\\sciiphoz\\source\\repos\\metalselling\\metalselling\\windows\\editproductwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\windows\\editproductwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|c:\\users\\sciiphoz\\source\\repos\\metalselling\\metalselling\\windows\\editproductwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\windows\\editproductwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|c:\\users\\sciiphoz\\source\\repos\\metalselling\\metalselling\\data\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\data\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|c:\\users\\sciiphoz\\source\\repos\\metalselling\\metalselling\\data\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\data\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|c:\\users\\sciiphoz\\source\\repos\\metalselling\\metalselling\\data\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\data\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|c:\\users\\sciiphoz\\source\\repos\\metalselling\\metalselling\\pages\\clientpage.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\pages\\clientpage.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|c:\\users\\sciiphoz\\source\\repos\\metalselling\\metalselling\\pages\\clientpage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D4E7153-C2B8-435B-8153-ECA09728EA22}|MetalSelling\\MetalSelling.csproj|solutionrelative:metalselling\\pages\\clientpage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -57,56 +69,44 @@
           "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ClientPage.axaml",
-              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Pages\\ClientPage.axaml",
-              "RelativeDocumentMoniker": "MetalSelling\\Pages\\ClientPage.axaml",
-              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Pages\\ClientPage.axaml",
-              "RelativeToolTip": "MetalSelling\\Pages\\ClientPage.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-27T08:50:11.104Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ClientPage.axaml.cs",
-              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Pages\\ClientPage.axaml.cs",
-              "RelativeDocumentMoniker": "MetalSelling\\Pages\\ClientPage.axaml.cs",
-              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Pages\\ClientPage.axaml.cs",
-              "RelativeToolTip": "MetalSelling\\Pages\\ClientPage.axaml.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAQwBYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T10:07:03.838Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OrderPage.axaml",
-              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Pages\\OrderPage.axaml",
-              "RelativeDocumentMoniker": "MetalSelling\\Pages\\OrderPage.axaml",
-              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Pages\\OrderPage.axaml",
-              "RelativeToolTip": "MetalSelling\\Pages\\OrderPage.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-27T11:00:46.633Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "SupplyPage.axaml",
-              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Pages\\SupplyPage.axaml",
-              "RelativeDocumentMoniker": "MetalSelling\\Pages\\SupplyPage.axaml",
-              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Pages\\SupplyPage.axaml",
-              "RelativeToolTip": "MetalSelling\\Pages\\SupplyPage.axaml",
+              "Title": "AddOrderWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Windows\\AddOrderWindow.axaml",
+              "RelativeDocumentMoniker": "MetalSelling\\Windows\\AddOrderWindow.axaml",
+              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Windows\\AddOrderWindow.axaml",
+              "RelativeToolTip": "MetalSelling\\Windows\\AddOrderWindow.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-27T11:16:42.303Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-10-28T10:48:33.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddSupplyWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Windows\\AddSupplyWindow.axaml",
+              "RelativeDocumentMoniker": "MetalSelling\\Windows\\AddSupplyWindow.axaml",
+              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Windows\\AddSupplyWindow.axaml",
+              "RelativeToolTip": "MetalSelling\\Windows\\AddSupplyWindow.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-28T10:48:25.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "History.cs",
+              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Data\\History.cs",
+              "RelativeDocumentMoniker": "MetalSelling\\Data\\History.cs",
+              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Data\\History.cs",
+              "RelativeToolTip": "MetalSelling\\Data\\History.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T10:48:16.778Z",
               "EditorCaption": ""
             },
             {
@@ -117,14 +117,10 @@
               "RelativeDocumentMoniker": "MetalSelling\\MainWindow.axaml.cs",
               "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\MainWindow.axaml.cs",
               "RelativeToolTip": "MetalSelling\\MainWindow.axaml.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAYwA4AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAADwvxQAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T12:37:42.138Z",
+              "WhenOpened": "2025-10-28T10:48:13.071Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
@@ -135,72 +131,123 @@
               "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\MainWindow.axaml",
               "RelativeToolTip": "MetalSelling\\MainWindow.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-27T11:41:13.773Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DataBaseContext.cs",
-              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Data\\DataBaseContext.cs",
-              "RelativeDocumentMoniker": "MetalSelling\\Data\\DataBaseContext.cs",
-              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Data\\DataBaseContext.cs",
-              "RelativeToolTip": "MetalSelling\\Data\\DataBaseContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T11:25:06.128Z",
+              "WhenOpened": "2025-10-28T10:48:12.035Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Data\\Product.cs",
-              "RelativeDocumentMoniker": "MetalSelling\\Data\\Product.cs",
-              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Data\\Product.cs",
-              "RelativeToolTip": "MetalSelling\\Data\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ProductPage.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Pages\\ProductPage.axaml.cs",
+              "RelativeDocumentMoniker": "MetalSelling\\Pages\\ProductPage.axaml.cs",
+              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Pages\\ProductPage.axaml.cs",
+              "RelativeToolTip": "MetalSelling\\Pages\\ProductPage.axaml.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAwCQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T11:22:11.725Z",
+              "WhenOpened": "2025-10-28T10:47:51.423Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Supplier.cs",
-              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Data\\Supplier.cs",
-              "RelativeDocumentMoniker": "MetalSelling\\Data\\Supplier.cs",
-              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Data\\Supplier.cs",
-              "RelativeToolTip": "MetalSelling\\Data\\Supplier.cs",
+              "Title": "SupplyPage.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Pages\\SupplyPage.axaml.cs",
+              "RelativeDocumentMoniker": "MetalSelling\\Pages\\SupplyPage.axaml.cs",
+              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Pages\\SupplyPage.axaml.cs",
+              "RelativeToolTip": "MetalSelling\\Pages\\SupplyPage.axaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T11:17:34.999Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Supply.cs",
-              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Data\\Supply.cs",
-              "RelativeDocumentMoniker": "MetalSelling\\Data\\Supply.cs",
-              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Data\\Supply.cs",
-              "RelativeToolTip": "MetalSelling\\Data\\Supply.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T11:17:11.511Z",
+              "WhenOpened": "2025-10-28T10:47:50.278Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Data\\Order.cs",
-              "RelativeDocumentMoniker": "MetalSelling\\Data\\Order.cs",
-              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Data\\Order.cs",
-              "RelativeToolTip": "MetalSelling\\Data\\Order.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "AddClientWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Windows\\AddClientWindow.axaml.cs",
+              "RelativeDocumentMoniker": "MetalSelling\\Windows\\AddClientWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Windows\\AddClientWindow.axaml.cs",
+              "RelativeToolTip": "MetalSelling\\Windows\\AddClientWindow.axaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T10:23:36.645Z",
+              "WhenOpened": "2025-10-28T10:47:46.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddOrderWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Windows\\AddOrderWindow.axaml.cs",
+              "RelativeDocumentMoniker": "MetalSelling\\Windows\\AddOrderWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Windows\\AddOrderWindow.axaml.cs",
+              "RelativeToolTip": "MetalSelling\\Windows\\AddOrderWindow.axaml.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAQwGAAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T10:47:41.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AddSupplyWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Windows\\AddSupplyWindow.axaml.cs",
+              "RelativeDocumentMoniker": "MetalSelling\\Windows\\AddSupplyWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Windows\\AddSupplyWindow.axaml.cs",
+              "RelativeToolTip": "MetalSelling\\Windows\\AddSupplyWindow.axaml.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T10:47:34.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EditProductWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Windows\\EditProductWindow.axaml",
+              "RelativeDocumentMoniker": "MetalSelling\\Windows\\EditProductWindow.axaml",
+              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Windows\\EditProductWindow.axaml",
+              "RelativeToolTip": "MetalSelling\\Windows\\EditProductWindow.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-28T10:47:28.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EditClientWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Windows\\EditClientWindow.axaml.cs",
+              "RelativeDocumentMoniker": "MetalSelling\\Windows\\EditClientWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Windows\\EditClientWindow.axaml.cs",
+              "RelativeToolTip": "MetalSelling\\Windows\\EditClientWindow.axaml.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAIwB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T10:40:12.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EditProductWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Windows\\EditProductWindow.axaml.cs",
+              "RelativeDocumentMoniker": "MetalSelling\\Windows\\EditProductWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Windows\\EditProductWindow.axaml.cs",
+              "RelativeToolTip": "MetalSelling\\Windows\\EditProductWindow.axaml.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAUwEMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T10:39:56.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Data\\Product.cs",
+              "RelativeDocumentMoniker": "MetalSelling\\Data\\Product.cs",
+              "ToolTip": "C:\\Users\\sciiphoz\\source\\repos\\MetalSelling\\MetalSelling\\Data\\Product.cs",
+              "RelativeToolTip": "MetalSelling\\Data\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T10:32:10.625Z",
               "EditorCaption": ""
             }
           ]

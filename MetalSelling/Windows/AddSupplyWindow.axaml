@@ -5,5 +5,30 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="MetalSelling.AddSupplyWindow"
         Title="AddSupplyWindow">
-  Welcome to Avalonia!
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<StackPanel Grid.Row="0"  HorizontalAlignment="Center">
+			<TextBlock>Supplier</TextBlock>
+			<ComboBox x:Name="IdSupplierComboBox" DisplayMemberBinding="{Binding Name}" Width="250"/>
+		</StackPanel>
+		<StackPanel Grid.Row="1"  HorizontalAlignment="Center">
+			<TextBlock>Product</TextBlock>
+			<ComboBox x:Name="IdProductComboBox" DisplayMemberBinding="{Binding Title}" Width="250"/>
+		</StackPanel>
+		<StackPanel Grid.Row="2" HorizontalAlignment="Center">
+			<TextBlock>Amount</TextBlock>
+			<TextBox x:Name="AmountTextBox" Width="250"/>
+		</StackPanel>
+
+		<StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+			<Button Background="#ABCFCE" x:Name="SaveButton" HorizontalAlignment="Center" Width="75" Margin="0, 0, 50, 0" HorizontalContentAlignment="Center" Click="SaveButton_Click">Save</Button>
+			<Button Background="#ABCFCE" x:Name="BackButton" HorizontalAlignment="Center" Width="75" HorizontalContentAlignment="Center" Click="BackButton_Click">Back</Button>
+		</StackPanel>
+    </Grid>
 </Window>

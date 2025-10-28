@@ -20,19 +20,19 @@
 
 		<StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center">
 			<TextBlock>Name</TextBlock>
-			<TextBox x:Name="TitleTextBox" Width="250"/>
+			<TextBox x:Name="NameTextBox" Width="250"/>
 		</StackPanel>
 		<StackPanel Grid.Row="2" Grid.Column="0"  HorizontalAlignment="Center">
 			<TextBlock>Type</TextBlock>
-			<ComboBox x:Name="IdMaterialTypeComboBox" DisplayMemberBinding="{Binding Title}" Width="250"/>
+			<ComboBox x:Name="IdClientTypeComboBox" DisplayMemberBinding="{Binding Title}" Width="250"/>
 		</StackPanel>
 		<StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
 			<TextBlock>Phone</TextBlock>
-			<TextBox x:Name="PriceTextBox" Width="250"/>
+			<TextBox x:Name="PhoneTextBox" Width="250"/>
 		</StackPanel>
 		<StackPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center">
 			<TextBlock>Email</TextBlock>
-			<TextBox x:Name="QuantityTextBox" Width="250"/>
+			<TextBox x:Name="EmailTextBox" Width="250"/>
 		</StackPanel>
 
 

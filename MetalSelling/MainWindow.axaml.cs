@@ -30,5 +30,15 @@ namespace MetalSelling
         {
             MainContentControl.Content = new ClientPage();
         }
+
+        private void ProductsPageButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            MainContentControl.Content = new ProductPage();
+        }
+
+        private void HistoriesPageButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            MainContentControl.Content = new HistoryPage();
+        }
     }
 }

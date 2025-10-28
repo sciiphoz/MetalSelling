@@ -1,0 +1,34 @@
+<Window xmlns="https://github.com/avaloniaui"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+		x:Class="MetalSelling.EditProductWindow"
+		Title="EditProductWindow">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<StackPanel Grid.Row="0" HorizontalAlignment="Center">
+			<TextBlock>Title</TextBlock>
+			<TextBox x:Name="TitleTextBox" Width="250"/>
+		</StackPanel>
+		<StackPanel Grid.Row="1" HorizontalAlignment="Center">
+			<TextBlock>Price per piece</TextBlock>
+			<TextBox x:Name="PricePerPieceTextBox" Width="250"/>
+		</StackPanel>
+		<StackPanel Grid.Row="2" HorizontalAlignment="Center">
+			<TextBlock>Type</TextBlock>
+			<ComboBox x:Name="IdMetalTypeComboBox" DisplayMemberBinding="{Binding Title}" Width="250"/>
+		</StackPanel>
+
+		<StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+			<Button Background="#ABCFCE" x:Name="SaveButton" HorizontalAlignment="Center" Width="75" Margin="0, 0, 50, 0" HorizontalContentAlignment="Center" Click="SaveButton_Click">Save</Button>
+			<Button Background="#ABCFCE" x:Name="BackButton" HorizontalAlignment="Center" Width="75" HorizontalContentAlignment="Center" Click="BackButton_Click">Back</Button>
+		</StackPanel>
+	</Grid>
+</Window>

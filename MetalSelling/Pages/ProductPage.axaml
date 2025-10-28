@@ -3,7 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="MetalSelling.ClientPage">
+             x:Class="MetalSelling.ProductPage">
     <Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="4*"></RowDefinition>
@@ -23,29 +23,19 @@
 
 								<StackPanel Grid.Column="0" Orientation="Vertical" Margin="15, 10" VerticalAlignment="Center">
 									<StackPanel Orientation="Horizontal" Margin="0, 10, 0, 10">
-										<TextBlock FontSize="18" Text="{Binding IdClientTypeNavigation.Title}"></TextBlock>
+										<TextBlock FontSize="18" Text="{Binding IdMetalTypeNavigation.Title}"></TextBlock>
 										<TextBlock FontSize="18" Text=" | "></TextBlock>
-										<TextBlock FontSize="18" Text="{Binding Name}"></TextBlock>
+										<TextBlock FontSize="18" Text="{Binding Title}"></TextBlock>
 									</StackPanel>
 									
 									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 10">
-										<TextBlock Text="Phone: "></TextBlock>
-										<TextBlock Text="{Binding Phone}"></TextBlock>
-									</StackPanel>
-
-									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 10">
-										<TextBlock Text="Email: "></TextBlock>
-										<TextBlock Text="{Binding Email}"></TextBlock>
-									</StackPanel>
-
-									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 10">
-										<TextBlock Text="Personal discount: "></TextBlock>
-										<TextBlock Text="{Binding PersonalDiscount}"></TextBlock>
+										<TextBlock Text="Amount: "></TextBlock>
+										<TextBlock Text="{Binding Amount}"></TextBlock>
 									</StackPanel>
 								</StackPanel>
 
 								<StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0, 25, 15, 0" HorizontalAlignment="Right" VerticalAlignment="Top">
-									<TextBlock Text="Number of orders: "></TextBlock>
+									<TextBlock Text="Price per piece: "></TextBlock>
 									<TextBlock FontWeight="Bold" Text="{Binding OrderCount}"></TextBlock>
 								</StackPanel>
 							</Grid>
@@ -54,10 +44,5 @@
 				</ListBox.ItemTemplate>
 			</ListBox>
 		</ScrollViewer>
-
-		<StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-			<Button x:Name="AddClientButton" Width="75" HorizontalContentAlignment="Center" Margin="25 0" Click="AddClientButton_Click" Content="Add"></Button>
-			<Button x:Name="DeleteClientButton" Width="75" HorizontalContentAlignment="Center" Margin="25 0" Click="DeleteClientButton_Click" Content="Delete"></Button>
-		</StackPanel>
     </Grid>
 </UserControl>
