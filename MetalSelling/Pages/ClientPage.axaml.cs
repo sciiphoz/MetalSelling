@@ -27,7 +27,7 @@ public partial class ClientPage : UserControl
 
         ContextClient.Client = selectedClient;
 
-        var editWindow = new EditClientWindow();
+        var editWindow = new EditClientWindow(selectedClient);
         var parent = this.VisualRoot as Window;
         await editWindow.ShowDialog(parent);
 

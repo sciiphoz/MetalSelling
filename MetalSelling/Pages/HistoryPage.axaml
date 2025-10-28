@@ -6,7 +6,7 @@
              x:Class="MetalSelling.HistoryPage">
     <Grid>
 		<Grid.RowDefinitions>
-			<RowDefinition Height="4*"></RowDefinition>
+			<RowDefinition Height="6*"></RowDefinition>
 			<RowDefinition Height="1*"></RowDefinition>
 		</Grid.RowDefinitions>
 
@@ -23,6 +23,8 @@
 
 								<StackPanel Grid.Column="0" Orientation="Vertical" Margin="15, 10" VerticalAlignment="Center">
 									<StackPanel Orientation="Horizontal" Margin="0, 10, 0, 10">
+										<TextBlock FontSize="18" Text="{Binding RecordType}"></TextBlock>
+										<TextBlock FontSize="18" Text=" | "></TextBlock>
 										<TextBlock FontSize="18" Text="{Binding IdProductNavigation.Title}"></TextBlock>
 									</StackPanel>
 									
@@ -34,7 +36,7 @@
 
 								<StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0, 25, 15, 0" HorizontalAlignment="Right" VerticalAlignment="Top">
 									<TextBlock Text="Quantity: "></TextBlock>
-									<TextBlock FontWeight="Bold" Text="{Binding OrderCount}"></TextBlock>
+									<TextBlock FontWeight="Bold" Text="{Binding Quantity}"></TextBlock>
 								</StackPanel>
 							</Grid>
 						</Border>

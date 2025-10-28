@@ -38,7 +38,7 @@ public partial class EditClientWindow : Window
 
     private void SaveButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        Regex nameCheck = new Regex("([À-ß¨][à-ÿ¸]+[\\-\\s]?){3,}");
+        Regex nameCheck = new Regex("[?!,.à-ÿÀ-ß¸¨0-9\\s]");
         Regex emailCheck = new Regex("[a-zA-Z1-9\\-\\._]+@[a-z1-9]+(.[a-z1-9]+){1,}");
         Regex phoneCheck = new Regex("\\+?\\d+([\\(\\s\\-]?\\d+[\\)\\s\\-]?[\\d\\s\\-]+)?");
 

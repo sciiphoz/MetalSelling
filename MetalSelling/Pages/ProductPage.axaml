@@ -6,7 +6,7 @@
              x:Class="MetalSelling.ProductPage">
     <Grid>
 		<Grid.RowDefinitions>
-			<RowDefinition Height="4*"></RowDefinition>
+			<RowDefinition Height="6*"></RowDefinition>
 			<RowDefinition Height="1*"></RowDefinition>
 		</Grid.RowDefinitions>
 
@@ -36,7 +36,7 @@
 
 								<StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0, 25, 15, 0" HorizontalAlignment="Right" VerticalAlignment="Top">
 									<TextBlock Text="Price per piece: "></TextBlock>
-									<TextBlock FontWeight="Bold" Text="{Binding OrderCount}"></TextBlock>
+									<TextBlock FontWeight="Bold" Text="{Binding PricePerPiece}"></TextBlock>
 								</StackPanel>
 							</Grid>
 						</Border>

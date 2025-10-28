@@ -14,6 +14,9 @@ public partial class AddSupplyWindow : Window
     public AddSupplyWindow()
     {
         InitializeComponent();
+
+        IdSupplierComboBox.ItemsSource = App.DataBaseContext.Suppliers.ToList();
+        IdProductComboBox.ItemsSource = App.DataBaseContext.Products.ToList();
     }
 
     private void SaveButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)

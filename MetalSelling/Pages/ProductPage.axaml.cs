@@ -24,7 +24,7 @@ public partial class ProductPage : UserControl
 
         ContextProduct.Product = selectedProduct;
 
-        var editWindow = new EditProductWindow();
+        var editWindow = new EditProductWindow(selectedProduct);
         var parent = this.VisualRoot as Window;
         await editWindow.ShowDialog(parent);
 

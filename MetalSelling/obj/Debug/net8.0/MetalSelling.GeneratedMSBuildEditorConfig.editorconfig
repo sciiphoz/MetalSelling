@@ -15,44 +15,44 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MetalSelling
-build_property.ProjectDir = C:\Users\sciiphoz\source\repos\MetalSelling\MetalSelling\
+build_property.ProjectDir = C:\Users\212202\Desktop\MetalSelling\MetalSelling\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/sciiphoz/source/repos/MetalSelling/MetalSelling/App.axaml]
+[C:/Users/212202/Desktop/MetalSelling/MetalSelling/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/sciiphoz/source/repos/MetalSelling/MetalSelling/MainWindow.axaml]
+[C:/Users/212202/Desktop/MetalSelling/MetalSelling/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/sciiphoz/source/repos/MetalSelling/MetalSelling/Pages/ClientPage.axaml]
+[C:/Users/212202/Desktop/MetalSelling/MetalSelling/Pages/ClientPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/sciiphoz/source/repos/MetalSelling/MetalSelling/Pages/HistoryPage.axaml]
+[C:/Users/212202/Desktop/MetalSelling/MetalSelling/Pages/HistoryPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/sciiphoz/source/repos/MetalSelling/MetalSelling/Pages/OrderPage.axaml]
+[C:/Users/212202/Desktop/MetalSelling/MetalSelling/Pages/OrderPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/sciiphoz/source/repos/MetalSelling/MetalSelling/Pages/ProductPage.axaml]
+[C:/Users/212202/Desktop/MetalSelling/MetalSelling/Pages/ProductPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/sciiphoz/source/repos/MetalSelling/MetalSelling/Pages/SupplyPage.axaml]
+[C:/Users/212202/Desktop/MetalSelling/MetalSelling/Pages/SupplyPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/sciiphoz/source/repos/MetalSelling/MetalSelling/Windows/AddClientWindow.axaml]
+[C:/Users/212202/Desktop/MetalSelling/MetalSelling/Windows/AddClientWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/sciiphoz/source/repos/MetalSelling/MetalSelling/Windows/AddOrderWindow.axaml]
+[C:/Users/212202/Desktop/MetalSelling/MetalSelling/Windows/AddOrderWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/sciiphoz/source/repos/MetalSelling/MetalSelling/Windows/AddSupplyWindow.axaml]
+[C:/Users/212202/Desktop/MetalSelling/MetalSelling/Windows/AddSupplyWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/sciiphoz/source/repos/MetalSelling/MetalSelling/Windows/EditClientWindow.axaml]
+[C:/Users/212202/Desktop/MetalSelling/MetalSelling/Windows/EditClientWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/sciiphoz/source/repos/MetalSelling/MetalSelling/Windows/EditProductWindow.axaml]
+[C:/Users/212202/Desktop/MetalSelling/MetalSelling/Windows/EditProductWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
