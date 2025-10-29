@@ -44,49 +44,69 @@ public partial class EditClientWindow : Window
 
         try
         {
-            if (NameTextBox.Text == string.Empty || IdClientTypeComboBox.SelectedItem == null || PhoneTextBox.Text == string.Empty || EmailTextBox.Text == string.Empty)
+            if (string.IsNullOrEmpty(NameTextBox.Text) ||
+                IdClientTypeComboBox.SelectedItem == null ||
+                string.IsNullOrEmpty(PhoneTextBox.Text) ||
+                string.IsNullOrEmpty(EmailTextBox.Text))
             {
                 throw new Exception("All fields must be filled.");
             }
-            else
+
+            if (!nameCheck.IsMatch(NameTextBox.Text))
             {
-                if (nameCheck.IsMatch(NameTextBox.Text))
+                throw new Exception("Full name should consist of surname, name and patronymic.");
+            }
+
+            if (!emailCheck.IsMatch(EmailTextBox.Text))
+            {
+                throw new Exception("Incorrect email format.");
+            }
+
+            if (!phoneCheck.IsMatch(PhoneTextBox.Text))
+            {
+                throw new Exception("Incorrect phone format.");
+            }
+
+            decimal? personalDiscount = null;
+            if (!string.IsNullOrEmpty(DiscountTextBox.Text))
+            {
+                if (decimal.TryParse(DiscountTextBox.Text, out decimal discount))
                 {
-                    if (emailCheck.IsMatch(EmailTextBox.Text))
+                    if (discount < 0 || discount > 100)
                     {
-                        if (phoneCheck.IsMatch(PhoneTextBox.Text))
-                        {
-                            _currentClient.Name = NameTextBox.Text;
-                            _currentClient.Email = PhoneTextBox.Text;
-                            _currentClient.Phone = EmailTextBox.Text;
-                            _currentClient.IdClientType = IdClientTypeComboBox.SelectedIndex + 1;
-
-                            App.DataBaseContext.Update(_currentClient);
-                            App.DataBaseContext.SaveChanges();
-
-                            this.Close();
-                        }
-                        else
-                        {
-                            throw new Exception("Incorrect phone format.");
-                        }
+                        throw new Exception("Discount must be between 0 and 100 percent.");
                     }
-                    else
-                    {
-                        throw new Exception("Incorrect email format.");
-                    }
+                    personalDiscount = discount;
                 }
                 else
                 {
-                    throw new Exception("Full name should consist of surname, name and patronymic.");
+                    throw new Exception("Discount must be a valid number.");
                 }
             }
+
+            _currentClient.Name = NameTextBox.Text.Trim();
+            _currentClient.Email = EmailTextBox.Text.Trim();
+            _currentClient.Phone = PhoneTextBox.Text.Trim();
+            _currentClient.IdClientType = ((ClientType)IdClientTypeComboBox.SelectedItem).Id;
+            _currentClient.PersonalDiscount = personalDiscount;
+
+            App.DataBaseContext.Clients.Update(_currentClient);
+            App.DataBaseContext.SaveChanges();
+
+            var successBox = MessageBoxManager.GetMessageBoxStandard("Success",
+                "Client updated successfully!",
+                MsBox.Avalonia.Enums.ButtonEnum.Ok,
+                MsBox.Avalonia.Enums.Icon.Success);
+            successBox.ShowWindowDialogAsync(this);
+
+            this.Close();
         }
         catch (Exception ex)
         {
-            var box = MessageBoxManager.GetMessageBoxStandard("Error.", ex.Message, MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
-            var parent = this.VisualRoot as Window;
-            box.ShowWindowDialogAsync(parent);
+            var box = MessageBoxManager.GetMessageBoxStandard("Error", ex.Message,
+                MsBox.Avalonia.Enums.ButtonEnum.Ok,
+                MsBox.Avalonia.Enums.Icon.Error);
+            box.ShowWindowDialogAsync(this);
         }
     }
 

@@ -1,12 +1,15 @@
 <Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="550"
-        x:Class="MetalSelling.AddOrderWindow"
-        Title="Добавление заказа"
-		WindowStartupLocation="CenterOwner">
-	<Grid>
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		mc:Ignorable="d" d:DesignWidth="700" d:DesignHeight="600"
+		x:Class="MetalSelling.AddOrderWindow"
+		Title="Add New Order"
+		WindowStartupLocation="CenterOwner"
+		WindowState="Maximized"
+		Background="#2c3e50"
+		FontFamily="Segoe UI">
+	<Grid Margin="20">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto"></RowDefinition>
 			<RowDefinition Height="Auto"></RowDefinition>
@@ -14,57 +17,214 @@
 			<RowDefinition Height="Auto"></RowDefinition>
 		</Grid.RowDefinitions>
 
-		<StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,10">
-			<TextBlock FontWeight="Bold">Клиент</TextBlock>
-			<ComboBox x:Name="IdClientComboBox" DisplayMemberBinding="{Binding Name}" Width="300" Height="30"/>
-		</StackPanel>
-
-		<StackPanel Grid.Row="1" HorizontalAlignment="Center" Margin="0,10">
-			<TextBlock FontWeight="Bold">Добавление товаров</TextBlock>
-			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,5">
-				<ComboBox x:Name="IdProductComboBox" DisplayMemberBinding="{Binding Title}" Width="200" Height="30" Margin="0,0,10,0"/>
-				<TextBox x:Name="QuantityTextBox" Width="80" Height="30" Margin="0,0,10,0" Watermark="Количество"/>
-				<Button Background="#ABCFCE" Click="AddProductButton_Click" Width="80" Height="30">Добавить</Button>
+		<Border Grid.Row="0" Background="#34495e" CornerRadius="8" Padding="15" Margin="0,0,0,15">
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+				<TextBlock Text="CREATE NEW ORDER"
+						   FontSize="18"
+						   FontWeight="Bold"
+						   Foreground="#ecf0f1"/>
 			</StackPanel>
-		</StackPanel>
+		</Border>
 
-		<ScrollViewer Grid.Row="2" Margin="20">
-			<ListBox x:Name="OrderItemsListBox">
-				<ListBox.ItemTemplate>
-					<DataTemplate>
-						<Border BorderThickness="1" BorderBrush="#546F94" Background="#E8F4F3" Margin="0,2" Padding="10">
-							<Grid>
-								<Grid.ColumnDefinitions>
-									<ColumnDefinition Width="*"/>
-									<ColumnDefinition Width="Auto"/>
-									<ColumnDefinition Width="Auto"/>
-									<ColumnDefinition Width="Auto"/>
-								</Grid.ColumnDefinitions>
+		<Border Grid.Row="1" Background="#34495e" CornerRadius="8" Padding="15" Margin="0,0,0,15">
+			<StackPanel HorizontalAlignment="Center">
+				<TextBlock Text="SELECT CLIENT"
+						   FontWeight="Bold"
+						   Foreground="#3498db"
+						   FontSize="14"
+						   Margin="0,0,0,8"
+						   HorizontalAlignment="Center"/>
+				<ComboBox x:Name="IdClientComboBox"
+						  DisplayMemberBinding="{Binding Name}"
+						  Width="350"
+						  Height="35"
+						  Background="#2c3e50"
+						  Foreground="#ecf0f1"
+						  BorderBrush="#3498db"
+						  BorderThickness="1"
+						  CornerRadius="4"/>
+			</StackPanel>
+		</Border>
 
-								<StackPanel Grid.Column="0" Orientation="Vertical">
-									<TextBlock FontWeight="Bold" Text="{Binding Product.Title}"/>
-									<TextBlock Text="{Binding Product.IdMetalTypeNavigation.Title}" Foreground="Gray"/>
-								</StackPanel>
+		<Border Grid.Row="2" Background="#34495e" CornerRadius="8" Padding="15" Margin="0,0,0,15">
+			<StackPanel>
+				<StackPanel>
+					<TextBlock Text="ADD PRODUCTS"
+							   FontWeight="Bold"
+							   Foreground="#3498db"
+							   FontSize="14"
+							   Margin="0,0,0,10"
+							   HorizontalAlignment="Center"/>
 
-								<TextBlock Grid.Column="1" Text="{Binding Quantity}" VerticalAlignment="Center" Margin="10,0"/>
-								<TextBlock Grid.Column="2" Text="{Binding TotalPrice, StringFormat='{}{0:C}'}" VerticalAlignment="Center" Margin="10,0"/>
-								<Button Grid.Column="3" Background="#FF6B6B" Foreground="White" Click="RemoveProductButton_Click"
-										Width="30" Height="30" Margin="10,0">×</Button>
-							</Grid>
-						</Border>
-					</DataTemplate>
-				</ListBox.ItemTemplate>
-			</ListBox>
-		</ScrollViewer>
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+						<ComboBox x:Name="IdProductComboBox"
+								  DisplayMemberBinding="{Binding Title}"
+								  Width="220"
+								  Height="35"
+								  Background="#2c3e50"
+								  Foreground="#ecf0f1"
+								  BorderBrush="#3498db"
+								  BorderThickness="1"
+								  CornerRadius="4"/>
 
-		<StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
-			<TextBlock FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,20,0">
-				Итого: <Run x:Name="TotalPriceText" Text="0 руб."/>
-			</TextBlock>
-			<Button Background="#ABCFCE" x:Name="SaveButton" HorizontalAlignment="Center" Width="100" Margin="0,0,20,0"
-					HorizontalContentAlignment="Center" Click="SaveButton_Click" Height="35">Сохранить заказ</Button>
-			<Button Background="#ABCFCE" x:Name="BackButton" HorizontalAlignment="Center" Width="75"
-					HorizontalContentAlignment="Center" Click="BackButton_Click" Height="35">Назад</Button>
-		</StackPanel>
+						<TextBox x:Name="QuantityTextBox"
+								 Width="100"
+								 Height="35"
+								 Background="#2c3e50"
+								 Foreground="#ecf0f1"
+								 BorderBrush="#f39c12"
+								 BorderThickness="1"
+								 VerticalContentAlignment="Center"
+								 CornerRadius="4"
+								 Padding="8,0"
+								 Watermark="Qty"/>
+
+						<Button Click="AddProductButton_Click"
+								Width="100"
+								Height="35"
+								Background="#27ae60"
+								BorderBrush="#27ae60"
+								BorderThickness="1"
+								Foreground="#ffffff"
+								VerticalContentAlignment="Center"
+								FontWeight="Bold"
+								CornerRadius="4"
+								Content="➕ ADD">
+							<Button.Styles>
+								<Style Selector="Button:pointerover">
+									<Setter Property="Background" Value="#2ecc71"/>
+									<Setter Property="BorderBrush" Value="#2ecc71"/>
+								</Style>
+							</Button.Styles>
+						</Button>
+					</StackPanel>
+				</StackPanel>
+
+				<ScrollViewer Margin="0,15,0,0" MaxHeight="200">
+					<ListBox x:Name="OrderItemsListBox" Background="Transparent" BorderThickness="0">
+						<ListBox.ItemTemplate>
+							<DataTemplate>
+								<Border BorderThickness="1"
+										BorderBrush="#3498db"
+										Background="#2c3e50"
+										CornerRadius="6"
+										Margin="0,3"
+										Padding="10">
+									<Grid>
+										<Grid.ColumnDefinitions>
+											<ColumnDefinition Width="*"/>
+											<ColumnDefinition Width="Auto"/>
+											<ColumnDefinition Width="Auto"/>
+											<ColumnDefinition Width="Auto"/>
+										</Grid.ColumnDefinitions>
+
+										<StackPanel Grid.Column="0" Orientation="Vertical">
+											<TextBlock FontWeight="Bold"
+													   Text="{Binding Product.Title}"
+													   Foreground="#ecf0f1"/>
+											<TextBlock Text="{Binding Product.IdMetalTypeNavigation.Title}"
+													   Foreground="#bdc3c7"
+													   FontSize="11"/>
+										</StackPanel>
+
+										<TextBlock Grid.Column="1"
+												   Text="{Binding Quantity}"
+												   VerticalAlignment="Center"
+												   Margin="15,0"
+												   Foreground="#f39c12"
+												   FontWeight="Bold"/>
+										<TextBlock Grid.Column="2"
+												   Text="{Binding TotalPrice, StringFormat='{}{0:N2} rub.'}"
+												   VerticalAlignment="Center"
+												   Margin="15,0"
+												   Foreground="#2ecc71"
+												   FontWeight="Bold"/>
+										<Button Grid.Column="3"
+												Background="#e74c3c"
+												Foreground="White"
+												Click="RemoveProductButton_Click"
+												Width="28"
+												Height="28"
+												Margin="10,0"
+												CornerRadius="4"
+												FontWeight="Bold"
+												Content="×">
+											<Button.Styles>
+												<Style Selector="Button:pointerover">
+													<Setter Property="Background" Value="#c0392b"/>
+												</Style>
+											</Button.Styles>
+										</Button>
+									</Grid>
+								</Border>
+							</DataTemplate>
+						</ListBox.ItemTemplate>
+					</ListBox>
+				</ScrollViewer>
+			</StackPanel>
+		</Border>
+
+		<Border Grid.Row="3" Background="#34495e" CornerRadius="8" Padding="15">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="Auto"/>
+				</Grid.ColumnDefinitions>
+
+				<StackPanel Grid.Column="0" Orientation="Vertical" VerticalAlignment="Center">
+					<TextBlock Text="ORDER TOTAL"
+							   Foreground="#bdc3c7"
+							   FontWeight="SemiBold"
+							   FontSize="12"/>
+					<TextBlock FontSize="20"
+							   FontWeight="Bold"
+							   Foreground="#e74c3c">
+						<Run Text="Total: "/>
+						<Run x:Name="TotalPriceText" Text="0.00 rub."/>
+					</TextBlock>
+				</StackPanel>
+
+				<StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="15">
+					<Button x:Name="SaveButton"
+							Height="40"
+							Background="#27ae60"
+							BorderBrush="#27ae60"
+							BorderThickness="1"
+							VerticalContentAlignment="Center"
+							Foreground="#ffffff"
+							FontWeight="Bold"
+							FontSize="14"
+							Click="SaveButton_Click"
+							CornerRadius="6"
+							Content="💾 SAVE ORDER">
+						<Button.Styles>
+							<Style Selector="Button:pointerover">
+								<Setter Property="Background" Value="#2ecc71"/>
+								<Setter Property="BorderBrush" Value="#2ecc71"/>
+							</Style>
+						</Button.Styles>
+					</Button>
+
+					<Button x:Name="BackButton"
+							Height="40"
+							Background="Transparent"
+							BorderBrush="#95a5a6"
+							BorderThickness="1"
+							VerticalContentAlignment="Center"
+							Foreground="#ecf0f1"
+							FontWeight="SemiBold"
+							Click="BackButton_Click"
+							CornerRadius="6"
+							Content="← BACK">
+						<Button.Styles>
+							<Style Selector="Button:pointerover">
+								<Setter Property="Background" Value="#95a5a6"/>
+								<Setter Property="Foreground" Value="#ffffff"/>
+							</Style>
+						</Button.Styles>
+					</Button>
+				</StackPanel>
+			</Grid>
+		</Border>
 	</Grid>
 </Window>

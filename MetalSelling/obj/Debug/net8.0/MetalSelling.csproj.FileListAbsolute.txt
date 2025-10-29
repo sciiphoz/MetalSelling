@@ -335,3 +335,6 @@ C:\Users\212202\Desktop\MetalSelling\MetalSelling\obj\Debug\net8.0\ref\MetalSell
 C:\Users\212202\Desktop\MetalSelling\MetalSelling\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
 C:\Users\212202\Desktop\MetalSelling\MetalSelling\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
 C:\Users\212202\Desktop\MetalSelling\MetalSelling\bin\Debug\net8.0\System.IO.Packaging.dll
+C:\Users\sciiphoz\source\repos\MetalSelling\MetalSelling\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+C:\Users\sciiphoz\source\repos\MetalSelling\MetalSelling\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
+C:\Users\sciiphoz\source\repos\MetalSelling\MetalSelling\bin\Debug\net8.0\System.IO.Packaging.dll

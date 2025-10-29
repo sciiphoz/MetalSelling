@@ -1,42 +1,75 @@
-<UserControl xmlns="https://github.com/avaloniaui"
+﻿<UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="MetalSelling.HistoryPage">
+             x:Class="MetalSelling.HistoryPage"
+             Background="Transparent">
     <Grid>
 		<Grid.RowDefinitions>
-			<RowDefinition Height="6*"></RowDefinition>
-			<RowDefinition Height="1*"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
 		</Grid.RowDefinitions>
 
-		<ScrollViewer Grid.Row="0">
-			<ListBox x:Name="MainListBox">
+		<ScrollViewer Grid.Row="0" Background="Transparent" Padding="10">
+			<ListBox x:Name="MainListBox" Background="Transparent" BorderThickness="0">
 				<ListBox.ItemTemplate>
 					<DataTemplate>
-						<Border Width="1000" Height="150" BorderThickness="2" BorderBrush="#546F94" Background="#ABCFCE">
-							<Grid>
+						<Border Height="120" 
+                               BorderThickness="1" 
+                               Background="#34495e"
+                               CornerRadius="8"
+                               Margin="0,5"
+                               BorderBrush="{Binding BorderColor}">
+							<Grid Margin="15">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
 
-								<StackPanel Grid.Column="0" Orientation="Vertical" Margin="15, 10" VerticalAlignment="Center">
-									<StackPanel Orientation="Horizontal" Margin="0, 10, 0, 10">
-										<TextBlock FontSize="18" Text="{Binding RecordType}"></TextBlock>
-										<TextBlock FontSize="18" Text=" | "></TextBlock>
-										<TextBlock FontSize="18" Text="{Binding IdProductNavigation.Title}"></TextBlock>
+								<StackPanel Grid.Column="0" Orientation="Vertical" VerticalAlignment="Center">
+									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 8">
+										<TextBlock FontSize="16" FontWeight="Bold" 
+                                                  Text="{Binding RecordType}"
+                                                  Foreground="{Binding RecordTypeColor}"/>
+										<TextBlock FontSize="16" Text=" • " 
+                                                  Foreground="#7f8c8d"
+                                                  VerticalAlignment="Center"/>
+										<TextBlock FontSize="16" FontWeight="SemiBold"
+                                                  Foreground="#ecf0f1" 
+                                                  Text="{Binding IdProductNavigation.Title}"/>
+                                        <TextBlock FontSize="14" Text=" • " 
+                                                  Foreground="#7f8c8d"
+                                                  VerticalAlignment="Center"
+                                                  Margin="10,0,0,0"/>
+                                        <TextBlock FontSize="14"
+                                                  Foreground="#bdc3c7"
+                                                  Text="{Binding IdProductNavigation.IdMetalTypeNavigation.Title}"/>
 									</StackPanel>
 									
-									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 10">
-										<TextBlock Text="Date: "></TextBlock>
-										<TextBlock Text="{Binding Date}"></TextBlock>
+									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 0">
+										<TextBlock Text="Date: " 
+                                                  Foreground="#bdc3c7"
+                                                  FontWeight="SemiBold"/>
+										<TextBlock Text="{Binding Date}" 
+                                                  Foreground="#ecf0f1"
+                                                  Margin="5,0,0,0"/>
 									</StackPanel>
 								</StackPanel>
 
-								<StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0, 25, 15, 0" HorizontalAlignment="Right" VerticalAlignment="Top">
-									<TextBlock Text="Quantity: "></TextBlock>
-									<TextBlock FontWeight="Bold" Text="{Binding Quantity}"></TextBlock>
+								<StackPanel Grid.Column="1" Orientation="Horizontal" 
+                                           HorizontalAlignment="Right" 
+                                           VerticalAlignment="Center">
+									<TextBlock Text="Quantity: " 
+                                              Foreground="#bdc3c7"
+                                              FontWeight="SemiBold"/>
+									<TextBlock FontSize="18" FontWeight="Bold" 
+                                              Text="{Binding Quantity}"
+                                              Foreground="{Binding QuantityColor}"
+                                              Margin="5,0,0,0"/>
+                                    <TextBlock Text=" pcs." 
+                                              Foreground="#bdc3c7"
+                                              VerticalAlignment="Center"
+                                              Margin="2,0,0,0"/>
 								</StackPanel>
 							</Grid>
 						</Border>

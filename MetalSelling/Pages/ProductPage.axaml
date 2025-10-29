@@ -1,42 +1,91 @@
-<UserControl xmlns="https://github.com/avaloniaui"
+﻿<UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="MetalSelling.ProductPage">
+             x:Class="MetalSelling.ProductPage"
+             Background="Transparent">
     <Grid>
-		<Grid.RowDefinitions>
-			<RowDefinition Height="6*"></RowDefinition>
-			<RowDefinition Height="1*"></RowDefinition>
-		</Grid.RowDefinitions>
-
-		<ScrollViewer Grid.Row="0">
-			<ListBox x:Name="MainListBox" DoubleTapped="MainListBox_DoubleTapped">
+		<ScrollViewer Background="Transparent" Padding="10">
+			<ListBox x:Name="MainListBox" DoubleTapped="MainListBox_DoubleTapped"
+                    Background="Transparent" BorderThickness="0">
 				<ListBox.ItemTemplate>
 					<DataTemplate>
-						<Border Width="1000" Height="150" BorderThickness="2" BorderBrush="#546F94" Background="#ABCFCE">
-							<Grid>
+						<Border Height="140" 
+                               BorderThickness="1" 
+                               BorderBrush="{Binding StockLevelColor}" 
+                               Background="#34495e"
+                               CornerRadius="8"
+                               Margin="0,5">
+							<Grid Margin="15">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
 
-								<StackPanel Grid.Column="0" Orientation="Vertical" Margin="15, 10" VerticalAlignment="Center">
-									<StackPanel Orientation="Horizontal" Margin="0, 10, 0, 10">
-										<TextBlock FontSize="18" Text="{Binding IdMetalTypeNavigation.Title}"></TextBlock>
-										<TextBlock FontSize="18" Text=" | "></TextBlock>
-										<TextBlock FontSize="18" Text="{Binding Title}"></TextBlock>
+								<StackPanel Grid.Column="0" Orientation="Vertical" VerticalAlignment="Center">
+									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 10">
+										<Border Background="{Binding MetalTypeColor}" 
+                                               CornerRadius="4" 
+                                               Padding="6,3"
+                                               VerticalAlignment="Center">
+											<TextBlock FontSize="12" FontWeight="Bold" 
+                                                      Foreground="#ffffff"
+                                                      Text="{Binding IdMetalTypeNavigation.Title}"/>
+										</Border>
+										<TextBlock FontSize="16" Text=" • " 
+                                                  Foreground="#7f8c8d"
+                                                  VerticalAlignment="Center"
+                                                  Margin="8,0"/>
+										<TextBlock FontSize="16" FontWeight="Bold"
+                                                  Foreground="#ecf0f1" 
+                                                  Text="{Binding Title}"/>
 									</StackPanel>
 									
-									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 10">
-										<TextBlock Text="Amount: "></TextBlock>
-										<TextBlock Text="{Binding Amount}"></TextBlock>
+									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 8">
+
+										<TextBlock Text="In stock: " 
+                                                  Foreground="#bdc3c7"
+                                                  FontWeight="SemiBold"/>
+										<TextBlock Text="{Binding Amount}" 
+                                                  Foreground="{Binding StockLevelColor}"
+                                                  FontWeight="Bold"
+                                                  Margin="5,0,0,0"/>
+										<TextBlock Text=" pcs." 
+                                                  Foreground="#bdc3c7"
+                                                  Margin="2,0,0,0"/>
+									</StackPanel>
+
+									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 0">
+										<TextBlock Text="Price per piece: " 
+                                                  Foreground="#bdc3c7"
+                                                  FontWeight="SemiBold"/>
+										<TextBlock Text="{Binding PricePerPiece, StringFormat='{}{0:N2} rub.'}" 
+                                                  Foreground="#2ecc71"
+                                                  FontWeight="Bold"
+                                                  Margin="5,0,0,0"/>
 									</StackPanel>
 								</StackPanel>
 
-								<StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0, 25, 15, 0" HorizontalAlignment="Right" VerticalAlignment="Top">
-									<TextBlock Text="Price per piece: "></TextBlock>
-									<TextBlock FontWeight="Bold" Text="{Binding PricePerPiece}"></TextBlock>
+								<StackPanel Grid.Column="1" Orientation="Vertical" 
+                                           HorizontalAlignment="Right" 
+                                           VerticalAlignment="Center">
+									<Border Background="{Binding StockLevelBackground}" 
+                                           CornerRadius="12" 
+                                           Padding="8,4"
+                                           BorderThickness="1"
+                                           BorderBrush="{Binding StockLevelColor}">
+										<TextBlock FontSize="12" FontWeight="Bold" 
+                                                  Foreground="#ffffff"
+                                                  Text="{Binding StockLevelText}"
+                                                  HorizontalAlignment="Center"/>
+									</Border>
+									
+									<TextBlock Margin="0,8,0,0"
+                                              Text="{Binding LastActivity, StringFormat='Updated: {0}'}" 
+                                              Foreground="#95a5a6"
+                                              FontSize="10"
+                                              HorizontalAlignment="Right"/>
 								</StackPanel>
 							</Grid>
 						</Border>

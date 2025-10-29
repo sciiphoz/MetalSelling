@@ -1,46 +1,72 @@
-<UserControl xmlns="https://github.com/avaloniaui"
+﻿<UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="MetalSelling.ClientPage">
+             x:Class="MetalSelling.ClientPage"
+             Background="Transparent">
     <Grid>
 		<Grid.RowDefinitions>
-			<RowDefinition Height="6*"></RowDefinition>
-			<RowDefinition Height="1*"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
 		</Grid.RowDefinitions>
 
-		<ScrollViewer Grid.Row="0">
-			<ListBox x:Name="MainListBox" DoubleTapped="MainListBox_DoubleTapped">
+		<ScrollViewer Grid.Row="0" Background="Transparent" Padding="10">
+			<ListBox x:Name="MainListBox" DoubleTapped="MainListBox_DoubleTapped"
+                    Background="Transparent" BorderThickness="0">
 				<ListBox.ItemTemplate>
 					<DataTemplate>
-						<Border Width="1000" Height="150" BorderThickness="2" BorderBrush="#546F94" Background="#ABCFCE">
-							<Grid>
+						<Border Height="140" 
+                               BorderThickness="1" 
+                               BorderBrush="#3498db" 
+                               Background="#34495e"
+                               CornerRadius="8"
+                               Margin="0,5">
+							<Grid Margin="15">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
 
-								<StackPanel Grid.Column="0" Orientation="Vertical" Margin="15, 10" VerticalAlignment="Center">
-									<StackPanel Orientation="Horizontal" Margin="0, 10, 0, 10">
-										<TextBlock FontSize="18" Text="{Binding IdClientTypeNavigation.Title}"></TextBlock>
-										<TextBlock FontSize="18" Text=" | "></TextBlock>
-										<TextBlock FontSize="18" Text="{Binding Name}"></TextBlock>
+								<StackPanel Grid.Column="0" Orientation="Vertical" VerticalAlignment="Center">
+									<StackPanel Orientation="Horizontal" Margin="0, 5, 0, 10">
+										<TextBlock FontSize="16" FontWeight="Bold" 
+                                                  Foreground="#3498db" 
+                                                  Text="{Binding IdClientTypeNavigation.Title}"/>
+										<TextBlock FontSize="16" Text=" • " 
+                                                  Foreground="#7f8c8d"
+                                                  VerticalAlignment="Center"/>
+										<TextBlock FontSize="16" FontWeight="SemiBold"
+                                                  Foreground="#ecf0f1" 
+                                                  Text="{Binding Name}"/>
 									</StackPanel>
 									
-									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 10">
-										<TextBlock Text="Phone: "></TextBlock>
-										<TextBlock Text="{Binding Phone}"></TextBlock>
+									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 8">
+										<TextBlock Text="Phone: " 
+                                                  Foreground="#bdc3c7"
+                                                  FontWeight="SemiBold"/>
+										<TextBlock Text="{Binding Phone}" 
+                                                  Foreground="#ecf0f1"
+                                                  Margin="5,0,0,0"/>
 									</StackPanel>
 
-									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 10">
-										<TextBlock Text="Email: "></TextBlock>
-										<TextBlock Text="{Binding Email}"></TextBlock>
+									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 8">
+										<TextBlock Text="Email: " 
+                                                  Foreground="#bdc3c7"
+                                                  FontWeight="SemiBold"/>
+										<TextBlock Text="{Binding Email}" 
+                                                  Foreground="#ecf0f1"
+                                                  Margin="5,0,0,0"/>
 									</StackPanel>
 
-									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 10">
-										<TextBlock Text="Personal discount: "></TextBlock>
-										<TextBlock Text="{Binding PersonalDiscount}"></TextBlock>
+									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 0">
+										<TextBlock Text="Personal discount: " 
+                                                  Foreground="#bdc3c7"
+                                                  FontWeight="SemiBold"/>
+										<TextBlock Text="{Binding PersonalDiscount, StringFormat='{}{0}%'}" 
+                                                  Foreground="#2ecc71"
+                                                  FontWeight="Bold"
+                                                  Margin="5,0,0,0"/>
 									</StackPanel>
 								</StackPanel>
 							</Grid>
@@ -50,9 +76,47 @@
 			</ListBox>
 		</ScrollViewer>
 
-		<StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-			<Button x:Name="AddClientButton" Width="75" HorizontalContentAlignment="Center" Margin="25 0" Click="AddClientButton_Click" Content="Add"></Button>
-			<Button x:Name="DeleteClientButton" Width="75" HorizontalContentAlignment="Center" Margin="25 0" Click="DeleteClientButton_Click" Content="Delete"></Button>
-		</StackPanel>
+		<Border Grid.Row="1" Background="#2c3e50" Height="70" 
+               BorderBrush="#34495e" BorderThickness="1 0 0 0">
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+				<Button x:Name="AddClientButton" 
+                       Height="35" 
+                       Background="Transparent" 
+                       BorderBrush="#27ae60" 
+                       BorderThickness="2"
+                       Foreground="#ecf0f1"
+                       FontWeight="SemiBold"
+                       Margin="15 0" 
+					   VerticalContentAlignment="Center"
+                       Click="AddClientButton_Click" 
+                       Content="➕ Add Client">
+					<Button.Styles>
+						<Style Selector="Button:pointerover">
+							<Setter Property="Background" Value="#27ae60"/>
+							<Setter Property="Foreground" Value="#ffffff"/>
+						</Style>
+					</Button.Styles>
+				</Button>
+				
+				<Button x:Name="DeleteClientButton" 
+                       Height="35" 
+                       Background="Transparent" 
+                       BorderBrush="#e74c3c" 
+                       BorderThickness="2"
+                       Foreground="#ecf0f1"
+                       FontWeight="SemiBold"
+					   VerticalContentAlignment="Center"
+                       Margin="15 0" 
+                       Click="DeleteClientButton_Click" 
+                       Content="🗑️ Delete">
+					<Button.Styles>
+						<Style Selector="Button:pointerover">
+							<Setter Property="Background" Value="#e74c3c"/>
+							<Setter Property="Foreground" Value="#ffffff"/>
+						</Style>
+					</Button.Styles>
+				</Button>
+			</StackPanel>
+		</Border>
     </Grid>
 </UserControl>

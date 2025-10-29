@@ -1,26 +1,165 @@
-<Window xmlns="https://github.com/avaloniaui"
+﻿<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="MetalSelling.MainWindow"
         WindowState="Maximized"
-        Title="MetalSelling">
+        Title="Metal Trading System"
+        Background="#1a1a1a">
     <Grid>
-		<Grid.RowDefinitions>
-            <RowDefinition Height="1*"></RowDefinition>
-            <RowDefinition Height="6*"></RowDefinition>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
     
-        <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button x:Name="ClientsPageButton" Click="ClientsPageButton_Click" Margin="15 0" Content="Clients"></Button>
-            <Button x:Name="OrdersPageButton" Click="OrdersPageButton_Click" Margin="15 0" Content="Orders"></Button>
-            <Button x:Name="HistoriesPageButton" Click="HistoriesPageButton_Click" Margin="15 0" Content="History"></Button>
-            <Button x:Name="ProductsPageButton" Click="ProductsPageButton_Click" Margin="15 0" Content="Products"></Button>
-            <Button x:Name="SuppliesPageButton" Click="SuppliesPageButton_Click" Margin="15 0" Content="Supplies"></Button>
-            <Button x:Name="CreateReportButton" Click="CreateReportButton_Click" Margin="15 0" Content="Create a report"></Button>
-        </StackPanel>
+        <Border Grid.Row="0" Background="#2c3e50" Height="80" BorderBrush="#34495e" BorderThickness="0 0 0 2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="10">
+                    <Button x:Name="ClientsPageButton" Click="ClientsPageButton_Click" 
+                            Width="120" Height="40" 
+                            Background="Transparent" 
+                            BorderBrush="#3498db" 
+                            BorderThickness="2"
+                            Foreground="#ecf0f1"
+                            FontWeight="SemiBold"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Content="Clients">
+                        <Button.Styles>
+                            <Style Selector="Button:pointerover">
+                                <Setter Property="Background" Value="#3498db"/>
+                                <Setter Property="Foreground" Value="#ffffff"/>
+                            </Style>
+                        </Button.Styles>
+                    </Button>
+                    
+                    <Button x:Name="OrdersPageButton" Click="OrdersPageButton_Click" 
+                            Width="120" Height="40" 
+                            Background="Transparent" 
+                            BorderBrush="#e74c3c" 
+                            BorderThickness="2"
+                            Foreground="#ecf0f1"
+                            FontWeight="SemiBold"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Content="Orders">
+                        <Button.Styles>
+                            <Style Selector="Button:pointerover">
+                                <Setter Property="Background" Value="#e74c3c"/>
+                                <Setter Property="Foreground" Value="#ffffff"/>
+                            </Style>
+                        </Button.Styles>
+                    </Button>
+                    
+                    <Button x:Name="HistoriesPageButton" Click="HistoriesPageButton_Click" 
+                            Width="120" Height="40" 
+                            Background="Transparent" 
+                            BorderBrush="#f39c12" 
+                            BorderThickness="2"
+                            Foreground="#ecf0f1"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            FontWeight="SemiBold"
+                            Content="History">
+                        <Button.Styles>
+                            <Style Selector="Button:pointerover">
+                                <Setter Property="Background" Value="#f39c12"/>
+                                <Setter Property="Foreground" Value="#ffffff"/>
+                            </Style>
+                        </Button.Styles>
+                    </Button>
+                    
+                    <Button x:Name="ProductsPageButton" Click="ProductsPageButton_Click" 
+                            Width="120" Height="40" 
+                            Background="Transparent" 
+                            BorderBrush="#27ae60" 
+                            BorderThickness="2"
+                            Foreground="#ecf0f1"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            FontWeight="SemiBold"
+                            Content="Products">
+                        <Button.Styles>
+                            <Style Selector="Button:pointerover">
+                                <Setter Property="Background" Value="#27ae60"/>
+                                <Setter Property="Foreground" Value="#ffffff"/>
+                            </Style>
+                        </Button.Styles>
+                    </Button>
+                    
+                    <Button x:Name="SuppliesPageButton" Click="SuppliesPageButton_Click" 
+                            Width="120" Height="40" 
+                            Background="Transparent" 
+                            BorderBrush="#9b59b6" 
+                            BorderThickness="2"
+                            Foreground="#ecf0f1"
+                            FontWeight="SemiBold"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Content="Supplies">
+                        <Button.Styles>
+                            <Style Selector="Button:pointerover">
+                                <Setter Property="Background" Value="#9b59b6"/>
+                                <Setter Property="Foreground" Value="#ffffff"/>
+                            </Style>
+                        </Button.Styles>
+                    </Button>
 
-        <ContentControl x:Name="MainContentControl" Grid.Row="1"></ContentControl>
+                    <Button x:Name="CreateReportButton" 
+                        Grid.Column="1"
+                        Click="CreateReportButton_Click" 
+                        Margin="40,0,20,0"
+                        Height="45" 
+                        Background="#e67e22"
+                        BorderBrush="#c0392b"
+                        BorderThickness="1"
+                        Foreground="#ffffff"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        FontWeight="Bold"
+                        FontSize="14"
+                        Content="GENERATE REPORT">
+                    <Button.Styles>
+                        <Style Selector="Button:pointerover">
+                            <Setter Property="Background" Value="#f39c12"/>
+                            <Setter Property="BorderBrush" Value="#e74c3c"/>
+                        </Style>
+                    </Button.Styles>
+                </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="1" Background="#2c3e50">
+            <ContentControl x:Name="MainContentControl" 
+                          Background="Transparent"
+                          Margin="20"/>
+        </Border>
+        
+        <Border Grid.Row="0" Grid.RowSpan="2" 
+                Background="Transparent"
+                IsHitTestVisible="False">
+            <Canvas>
+                <Rectangle Canvas.Left="0" Canvas.Top="0" 
+                          Width="4" Height="80" 
+                          Fill="#95a5a6"/>
+                <Rectangle Canvas.Left="0" Canvas.Top="0" 
+                          Width="80" Height="4" 
+                          Fill="#95a5a6"/>
+                
+                <Rectangle Canvas.Right="0" Canvas.Top="0" 
+                          Width="4" Height="80" 
+                          Fill="#95a5a6"/>
+                <Rectangle Canvas.Right="0" Canvas.Top="0" 
+                          Width="80" Height="4" 
+                          Fill="#95a5a6"/>
+            </Canvas>
+        </Border>
     </Grid>
 </Window>

@@ -1,53 +1,122 @@
-<UserControl xmlns="https://github.com/avaloniaui"
+﻿<UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="MetalSelling.OrderPage">
-        <Grid>
+             x:Class="MetalSelling.OrderPage"
+             Background="Transparent">
+    <Grid>
 		<Grid.RowDefinitions>
-			<RowDefinition Height="6*"></RowDefinition>
-			<RowDefinition Height="1*"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
 		</Grid.RowDefinitions>
 
-		<ScrollViewer Grid.Row="0">
-			<ListBox x:Name="MainListBox">
+		<ScrollViewer Grid.Row="0" Background="Transparent" Padding="10">
+			<ListBox x:Name="MainListBox" Background="Transparent" BorderThickness="0">
 				<ListBox.ItemTemplate>
 					<DataTemplate>
-						<Border Width="1000" Height="150" BorderThickness="2" BorderBrush="#546F94" Background="#ABCFCE">
+						<Border BorderThickness="1" 
+                               BorderBrush="{Binding StatusColor}" 
+                               Background="#34495e" 
+                               CornerRadius="8"
+                               Margin="0,8" 
+                               Padding="15">
 							<Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
 
-								<StackPanel Grid.Column="0" Orientation="Vertical" Margin="15, 10" VerticalAlignment="Center">
-									<StackPanel Orientation="Horizontal" Margin="0, 10, 0, 10">
-										<TextBlock FontSize="18" Text="{Binding IdClientNavigation.Name}"></TextBlock>
-										<TextBlock FontSize="18" Text=" | "></TextBlock>
-										<TextBlock FontSize="18" Text="{Binding IdProductNavigation.Title}"></TextBlock>
-									</StackPanel>
-									
-									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 10">
-										<TextBlock Text="Date: "></TextBlock>
-										<TextBlock Text="{Binding Date}"></TextBlock>
-									</StackPanel>
+                                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,12">
+                                    <TextBlock FontSize="16" FontWeight="Bold" 
+                                              Foreground="#3498db" 
+                                              Text="{Binding ClientName}"/>
+                                    <TextBlock FontSize="16" Text=" • " 
+                                              Foreground="#7f8c8d"
+                                              VerticalAlignment="Center"
+                                              Margin="8,0"/>
+                                    <TextBlock FontSize="16" 
+                                              Foreground="#ecf0f1"
+                                              Text="{Binding OrderDate, StringFormat='Order from {0:dd.MM.yyyy}'}"/>
+                                    <TextBlock FontSize="16" Text=" • " 
+                                              Foreground="#7f8c8d"
+                                              VerticalAlignment="Center"
+                                              Margin="8,0"/>
+                                    <Border Background="{Binding StatusBackground}" 
+                                            CornerRadius="4" 
+                                            Padding="6,2">
+                                        <TextBlock FontSize="12" FontWeight="Bold" 
+                                                  Foreground="#ffffff"
+                                                  Text="{Binding Status}"/>
+                                    </Border>
+                                </StackPanel>
 
-									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 10">
-										<TextBlock Text="Quantity: "></TextBlock>
-										<TextBlock Text="{Binding Quantity}"></TextBlock>
-									</StackPanel>
+                                <ItemsControl Grid.Row="1" ItemsSource="{Binding OrderItems}" Margin="0,0,0,12">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Border BorderThickness="0,0,0,1" 
+                                                   BorderBrush="#2c3e50" 
+                                                   Padding="0,6">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    
+                                                    <TextBlock Grid.Column="0" 
+                                                              Text="{Binding ProductTitle}" 
+                                                              Foreground="#ecf0f1"
+                                                              VerticalAlignment="Center"/>
+                                                    <TextBlock Grid.Column="1" 
+                                                              Text="{Binding Quantity}" 
+                                                              Foreground="#f39c12"
+                                                              FontWeight="SemiBold"
+                                                              VerticalAlignment="Center" 
+                                                              Margin="20,0"/>
+                                                    <TextBlock Grid.Column="2" 
+                                                              Text="pcs." 
+                                                              Foreground="#bdc3c7"
+                                                              VerticalAlignment="Center" 
+                                                              Margin="5,0"/>
+                                                    <TextBlock Grid.Column="3" 
+                                                              Text="{Binding ItemPrice, StringFormat='{}{0:N2} rub.'}" 
+                                                              Foreground="#2ecc71"
+                                                              FontWeight="SemiBold"
+                                                              VerticalAlignment="Center" 
+                                                              Margin="20,0"/>
+                                                </Grid>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
 
-									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 10">
-										<TextBlock Text="Status: "></TextBlock>
-										<TextBlock Text="{Binding Status}"></TextBlock>
-									</StackPanel>
-								</StackPanel>
+                                <Grid Grid.Row="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
 
-								<StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0, 25, 15, 0" HorizontalAlignment="Right" VerticalAlignment="Top">
-									<TextBlock Text="Full price: "></TextBlock>
-									<TextBlock FontWeight="Bold" Text="{Binding Price}"></TextBlock>
-								</StackPanel>
+                                    <StackPanel Grid.Column="0" Orientation="Vertical">
+                                        <TextBlock Text="{Binding ProductsCount, StringFormat='Total products: {0}'}" 
+                                                  Foreground="#bdc3c7"
+                                                  FontWeight="SemiBold"/>
+                                        <TextBlock Text="{Binding TotalQuantity, StringFormat='Total quantity: {0} pcs.'}" 
+                                                  Foreground="#bdc3c7"
+                                                  FontWeight="SemiBold"/>
+                                    </StackPanel>
+
+                                    <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Right">
+                                        <TextBlock Text="Total cost:" 
+                                                  Foreground="#bdc3c7"
+                                                  FontWeight="SemiBold"/>
+                                        <TextBlock FontSize="16" FontWeight="Bold" 
+                                                  Text="{Binding TotalPrice, StringFormat='{}{0:N2} rub.'}" 
+                                                  Foreground="#e74c3c"/>
+                                    </StackPanel>
+                                </Grid>
 							</Grid>
 						</Border>
 					</DataTemplate>
@@ -55,9 +124,47 @@
 			</ListBox>
 		</ScrollViewer>
 
-		<StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-			<Button x:Name="AddOrderButton" Width="75" HorizontalContentAlignment="Center" Margin="25 0" Click="AddOrderButton_Click" Content="Add"></Button>
-			<Button x:Name="DeleteOrderButton" Width="75" HorizontalContentAlignment="Center" Margin="25 0" Click="DeleteOrderButton_Click" Content="Delete"></Button>
-		</StackPanel>
+		<Border Grid.Row="1" Background="#2c3e50" Height="70" 
+               BorderBrush="#34495e" BorderThickness="1 0 0 0">
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+				<Button x:Name="AddOrderButton" 
+                       Height="35" 
+                       Background="Transparent" 
+                       BorderBrush="#27ae60" 
+                       BorderThickness="2"
+                       Foreground="#ecf0f1"
+                       VerticalContentAlignment="Center"
+                       FontWeight="SemiBold"
+                       Margin="15 0" 
+                       Click="AddOrderButton_Click" 
+                       Content="➕ New Order">
+					<Button.Styles>
+						<Style Selector="Button:pointerover">
+							<Setter Property="Background" Value="#27ae60"/>
+							<Setter Property="Foreground" Value="#ffffff"/>
+						</Style>
+					</Button.Styles>
+				</Button>
+				
+				<Button x:Name="DeleteOrderButton" 
+                       Height="35" 
+                       Background="Transparent" 
+                       BorderBrush="#e74c3c" 
+                       BorderThickness="2"
+                       Foreground="#ecf0f1"
+                       VerticalContentAlignment="Center"
+                       FontWeight="SemiBold"
+                       Margin="15 0" 
+                       Click="DeleteOrderButton_Click" 
+                       Content="🗑️ Delete">
+					<Button.Styles>
+						<Style Selector="Button:pointerover">
+							<Setter Property="Background" Value="#e74c3c"/>
+							<Setter Property="Foreground" Value="#ffffff"/>
+						</Style>
+					</Button.Styles>
+				</Button>
+			</StackPanel>
+		</Border>
     </Grid>
 </UserControl>

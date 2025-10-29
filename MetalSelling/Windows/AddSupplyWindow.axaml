@@ -1,35 +1,137 @@
-<Window xmlns="https://github.com/avaloniaui"
+﻿<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="500"
         x:Class="MetalSelling.AddSupplyWindow"
-        Title="AddSupplyWindow"
-		WindowStartupLocation="CenterOwner">
-    <Grid>
-		<Grid.RowDefinitions>
-			<RowDefinition></RowDefinition>
-			<RowDefinition></RowDefinition>
-			<RowDefinition></RowDefinition>
-			<RowDefinition></RowDefinition>
-		</Grid.RowDefinitions>
+        Title="Add New Supply"
+        WindowStartupLocation="CenterOwner"
+        Background="#2c3e50"
+        FontFamily="Segoe UI">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <Border Grid.Row="0" Background="#34495e" CornerRadius="8" Padding="15" Margin="0,0,0,20">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="ADD NEW SUPPLY" 
+                          FontSize="18" 
+                          FontWeight="Bold" 
+                          Foreground="#ecf0f1"/>
+            </StackPanel>
+        </Border>
 
-		<StackPanel Grid.Row="0"  HorizontalAlignment="Center">
-			<TextBlock>Supplier</TextBlock>
-			<ComboBox x:Name="IdSupplierComboBox" DisplayMemberBinding="{Binding Name}" Width="250"/>
-		</StackPanel>
-		<StackPanel Grid.Row="1"  HorizontalAlignment="Center">
-			<TextBlock>Product</TextBlock>
-			<ComboBox x:Name="IdProductComboBox" DisplayMemberBinding="{Binding Title}" Width="250"/>
-		</StackPanel>
-		<StackPanel Grid.Row="2" HorizontalAlignment="Center">
-			<TextBlock>Amount</TextBlock>
-			<TextBox x:Name="AmountTextBox" Width="250"/>
-		</StackPanel>
+        <Grid Grid.Row="1" Margin="0,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-		<StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
-			<Button Background="#ABCFCE" x:Name="SaveButton" HorizontalAlignment="Center" Width="75" Margin="0, 0, 50, 0" HorizontalContentAlignment="Center" Click="SaveButton_Click">Save</Button>
-			<Button Background="#ABCFCE" x:Name="BackButton" HorizontalAlignment="Center" Width="75" HorizontalContentAlignment="Center" Click="BackButton_Click">Back</Button>
-		</StackPanel>
+            <StackPanel Grid.Row="0" Margin="0,0,0,20" HorizontalAlignment="Center">
+                <TextBlock Text="SUPPLIER *" 
+                          Foreground="#bdc3c7" 
+                          FontWeight="SemiBold"
+                          FontSize="12"
+                          Margin="0,0,0,8"/>
+                <ComboBox x:Name="IdSupplierComboBox" 
+                         DisplayMemberBinding="{Binding Title}" 
+                         Width="350"
+                         Height="40"
+                         Background="#34495e"
+                         Foreground="#ecf0f1"
+                         BorderBrush="#3498db"
+                         BorderThickness="1"
+                         CornerRadius="4"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Margin="0,0,0,20" HorizontalAlignment="Center">
+                <TextBlock Text="PRODUCT *" 
+                          Foreground="#bdc3c7" 
+                          FontWeight="SemiBold"
+                          FontSize="12"
+                          Margin="0,0,0,8"/>
+                <ComboBox x:Name="IdProductComboBox" 
+                         DisplayMemberBinding="{Binding Title}" 
+                         Width="350"
+                         Height="40"
+                         Background="#34495e"
+                         Foreground="#ecf0f1"
+                         BorderBrush="#3498db"
+                         BorderThickness="1"
+                         CornerRadius="4"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Margin="0,0,0,20" HorizontalAlignment="Center">
+                <TextBlock Text="AMOUNT *" 
+                          Foreground="#bdc3c7" 
+                          FontWeight="SemiBold"
+                          FontSize="12"
+                          Margin="0,0,0,8"/>
+                <TextBox x:Name="AmountTextBox" 
+                        Width="350"
+                        Height="40"
+                        Background="#34495e"
+                        Foreground="#ecf0f1"
+                        VerticalContentAlignment="Center"
+                        BorderBrush="#f39c12"
+                        BorderThickness="1"
+                        CornerRadius="4"
+                        Padding="12,0"
+                        FontSize="14"
+                        Watermark="Enter quantity..."/>
+                <TextBlock Text="Enter the quantity of products in this supply" 
+                          Foreground="#95a5a6" 
+                          FontSize="11"
+                          Margin="0,5,0,0"/>
+            </StackPanel>
+        </Grid>
+
+        <Border Grid.Row="2" Background="#34495e" CornerRadius="8" Padding="15">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="20">
+                <Button x:Name="SaveButton" 
+                       Height="40" 
+                       Background="#27ae60"
+                       BorderBrush="#27ae60"
+                       BorderThickness="1"
+                       Foreground="#ffffff"
+                       FontWeight="Bold"
+                       FontSize="14"
+                       Click="SaveButton_Click"
+                       VerticalContentAlignment="Center"
+                       CornerRadius="6"
+                       Content="💾 SAVE">
+                    <Button.Styles>
+                        <Style Selector="Button:pointerover">
+                            <Setter Property="Background" Value="#2ecc71"/>
+                            <Setter Property="BorderBrush" Value="#2ecc71"/>
+                        </Style>
+                    </Button.Styles>
+                </Button>
+                
+                <Button x:Name="BackButton" 
+                       Height="40" 
+                       Background="Transparent"
+                       BorderBrush="#95a5a6"
+                       BorderThickness="1"
+                       Foreground="#ecf0f1"
+                       FontWeight="SemiBold"
+                       Click="BackButton_Click"
+                       VerticalContentAlignment="Center"
+                       CornerRadius="6"
+                       Content="← BACK">
+                    <Button.Styles>
+                        <Style Selector="Button:pointerover">
+                            <Setter Property="Background" Value="#95a5a6"/>
+                            <Setter Property="Foreground" Value="#ffffff"/>
+                        </Style>
+                    </Button.Styles>
+                </Button>
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>
