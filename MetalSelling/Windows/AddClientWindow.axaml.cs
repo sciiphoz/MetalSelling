@@ -50,6 +50,7 @@ public partial class AddClientWindow : Window
             }
 
             decimal? personalDiscount = null;
+
             if (!string.IsNullOrEmpty(DiscountTextBox.Text))
             {
                 if (decimal.TryParse(DiscountTextBox.Text, out decimal discount))

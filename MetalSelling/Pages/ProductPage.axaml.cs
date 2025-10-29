@@ -17,21 +17,6 @@ public partial class ProductPage : UserControl
         RefreshData();
     }
 
-    private async void MainListBox_DoubleTapped(object? sender, Avalonia.Input.TappedEventArgs e)
-    {
-        var selectedProduct = MainListBox.SelectedItem as Product;
-
-        if (selectedProduct == null) return;
-
-        ContextProduct.Product = selectedProduct;
-
-        var editWindow = new EditProductWindow();
-        var parent = this.VisualRoot as Window;
-        await editWindow.ShowDialog(parent);
-
-        RefreshData();
-    }
-
     private void RefreshData()
     {
         var products = App.DataBaseContext.Products

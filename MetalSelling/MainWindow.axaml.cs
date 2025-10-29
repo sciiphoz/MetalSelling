@@ -90,7 +90,7 @@ namespace MetalSelling
                         var balanceChange = productSupplies - productOrders;
                         var profit = orders.Where(o => o.IdProduct == product.Id).Sum(o => o.Price) -
                                     (supplies.Where(s => s.IdProduct == product.Id).Sum(s => s.Amount) *
-                                     (product.PricePerPiece - (product.PricePerPiece / 1.5m))); // Пример расчета прибыли
+                                     (product.PricePerPiece - (product.PricePerPiece / 1.5m)));
 
                         if (productOrders > 0 || productSupplies > 0)
                         {
@@ -109,7 +109,7 @@ namespace MetalSelling
                     var totalSuppliesQuantity = supplies.Sum(s => s.Amount);
                     var totalSuppliesPrice = supplies.Sum(s => s.Price);
                     var totalBalanceChange = totalSuppliesQuantity - totalOrdersQuantity;
-                    var estimatedProfit = totalOrdersPrice - (totalSuppliesPrice * 0.67m); // Примерная прибыль (33% наценка)
+                    var estimatedProfit = totalOrdersPrice - (totalSuppliesPrice * 0.67m);
 
                     AddParagraph(body, $"Общее количество продаж: {totalOrdersQuantity} шт.", false, 12, JustificationValues.Left);
                     AddParagraph(body, $"Общая сумма продаж: {totalOrdersPrice:C}", false, 12, JustificationValues.Left);
@@ -150,7 +150,7 @@ namespace MetalSelling
             {
                 runProperties.Bold = new Bold();
             }
-            runProperties.FontSize = new FontSize() { Val = (fontSize * 2).ToString() }; // FontSize в половинах пункта
+            runProperties.FontSize = new FontSize() { Val = (fontSize * 2).ToString() }; 
             run.RunProperties = runProperties;
             run.AppendChild(new Text(text));
 

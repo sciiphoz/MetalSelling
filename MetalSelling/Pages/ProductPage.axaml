@@ -7,7 +7,7 @@
              Background="Transparent">
     <Grid>
 		<ScrollViewer Background="Transparent" Padding="10">
-			<ListBox x:Name="MainListBox" DoubleTapped="MainListBox_DoubleTapped"
+			<ListBox x:Name="MainListBox"
                     Background="Transparent" BorderThickness="0">
 				<ListBox.ItemTemplate>
 					<DataTemplate>

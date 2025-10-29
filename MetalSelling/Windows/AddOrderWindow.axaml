@@ -71,7 +71,7 @@
 								 Width="100"
 								 Height="35"
 								 Background="#2c3e50"
-								 Foreground="#ecf0f1"
+								 Foreground="#232323"
 								 BorderBrush="#f39c12"
 								 BorderThickness="1"
 								 VerticalContentAlignment="Center"
@@ -118,7 +118,7 @@
 											<ColumnDefinition Width="Auto"/>
 										</Grid.ColumnDefinitions>
 
-										<StackPanel Grid.Column="0" Orientation="Vertical">
+										<StackPanel Grid.Column="0" Orientation="Vertical" VerticalAlignment="Center">
 											<TextBlock FontWeight="Bold"
 													   Text="{Binding Product.Title}"
 													   Foreground="#ecf0f1"/>
@@ -148,6 +148,7 @@
 												Margin="10,0"
 												CornerRadius="4"
 												FontWeight="Bold"
+												VerticalContentAlignment="Top"
 												Content="×">
 											<Button.Styles>
 												<Style Selector="Button:pointerover">
